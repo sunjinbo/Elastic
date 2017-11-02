@@ -1,0 +1,21 @@
+// ====================================================================
+// File: Elastic_reg.rss
+// Created: 06/22/09
+// Author: Sun Jinbo
+// Copyright (c): Tieto, All rights reserved
+// ==================================================================== */
+
+//Elastic application's registration resource file 
+
+#include <appinfo.rh>
+
+UID2 KUidAppRegistrationResourceFile
+UID3 0xAFF05672
+
+RESOURCE APP_REGISTRATION_INFO 
+    {
+    app_file="Elastic";
+    //
+    localisable_resource_file="\\resource\\apps\\Elastic_loc";
+    //
+    }

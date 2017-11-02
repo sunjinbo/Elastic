@@ -1,0 +1,87 @@
+// ====================================================================
+// * File: Elastic.mmp
+// * Created: 06/22/09
+// * Author: Sun Jinbo
+// * Copyright (c): Tieto, All rights reserved
+// * ====================================================================
+
+CAPABILITY None
+
+#ifdef __UI_FRAMEWORKS_V2__
+TARGETPATH    \sys\bin
+#if defined(EKA2) || !defined(WINS)
+TARGET          Elastic.exe
+TARGETTYPE exe
+#else // EKA1 WINS
+TARGET          Elastic.app
+TARGETTYPE exedll
+deffile \epoc32\release\wins\Elastic.def
+#endif
+#else // __UI_FRAMEWORKS_V2__
+TARGET          Elastic.app
+TARGETPATH      \system\apps\Elastic
+TARGETTYPE app
+#endif
+
+UID               0x100039CE 0xAFF05672
+
+LANG              SC
+
+SOURCEPATH        ..\src
+SOURCE            Elastic.cpp
+SOURCE            ElasticApplication.cpp 
+SOURCE            ElasticAppView.cpp
+SOURCE            ElasticAppUi.cpp
+SOURCE            ElasticDocument.cpp 
+SOURCE            Edge.cpp
+SOURCE            Node.cpp
+SOURCE            Scene.cpp
+
+SOURCEPATH        ..\group
+
+
+USERINCLUDE       ..\inc 
+
+SYSTEMINCLUDE     \epoc32\include
+#if defined ( __S60_50__ )
+SYSTEMINCLUDE           \epoc32\include\middleware
+SYSTEMINCLUDE           \epoc32\include\domain\middleware
+SYSTEMINCLUDE           \epoc32\include\domain\applications
+SYSTEMINCLUDE           \epoc32\include\domain\osextensions
+SYSTEMINCLUDE           \epoc32\include\osextensions
+SYSTEMINCLUDE           \epoc32\include\domain\middleware\loc
+#endif
+
+LIBRARY           euser.lib
+LIBRARY           apparc.lib
+LIBRARY           cone.lib 
+LIBRARY           eikcore.lib  
+LIBRARY           avkon.lib  
+LIBRARY           gdi.lib
+LIBRARY           fbscli.lib
+LIBRARY           bitgdi.lib
+LIBRARY           ws32.lib
+
+#ifdef __UI_FRAMEWORKS_V2__
+START RESOURCE    Elastic.RSS
+HEADER
+targetpath    \resource\apps
+lang        sc
+end
+#else
+RESOURCE        Elastic.RSS 
+#endif
+
+#ifdef __UI_FRAMEWORKS_V2__
+sourcepath        .
+START RESOURCE    Elastic_reg.rss
+TARGETPATH    \private\10003a3f\import\apps
+END
+
+start resource Elastic_loc.RSS
+targetpath \resource\apps
+lang sc
+end
+#endif
+
+// End of File

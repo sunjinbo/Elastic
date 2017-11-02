@@ -1,0 +1,23 @@
+; Elastic.pkg
+;
+;Language - standard language definitions
+&EN
+
+; standard SIS file header
+#{"Elastic"},(0xAFF05672),1,0,0
+
+;Supports Series 60 v 3.0
+(0x101F7961), 0, 0, 0, {"Series60ProductID"}
+
+;Localized Vendor Name
+%{"My Test EN"}
+
+;Unique Vendor name
+:"Vendor"
+
+; Files to copy
+"\epoc32\release\armv5\urel\Elastic.exe"-"!:\sys\bin\Elastic.exe"
+"\epoc32\data\Z\Resource\apps\Elastic_icon.mif"-"!:\resource\apps\Elastic_icon.mif"
+"\epoc32\data\z\private\10003a3f\import\apps\Elastic_reg.rsc"-"!:\private\10003a3f\import\apps\Elastic_reg.rsc"
+"\epoc32\data\z\resource\apps\Elastic_loc.Rsc"-"!:\resource\apps\Elastic_loc.Rsc"
+"\epoc32\data\z\resource\apps\Elastic.Rsc"-"!:\resource\apps\Elastic.Rsc"

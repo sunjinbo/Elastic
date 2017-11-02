@@ -1,0 +1,11 @@
+// ====================================================================
+// File: Elastic_loc.rss
+// Created: 06/22/09
+// Author: Sun Jinbo
+// Copyright (c): Tieto, All rights reserved
+// ====================================================================
+
+//rls_string STRING_r_Elastic_icon_path "z:\\resource\\apps\\Elasticicon.mbm"
+rls_string STRING_short_caption "Elastic"
+rls_string STRING_r_Elastic_caption "Elastic"
+

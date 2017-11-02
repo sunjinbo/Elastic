@@ -1,0 +1,20 @@
+/* ====================================================================
+ * File: Elastic.hrh
+ * Created: 06/22/09
+ * Author: Sun Jinbo
+ * Copyright (c): Tieto, All rights reserved
+ * ==================================================================== */
+
+#ifndef ELASTIC_HRH
+#define ELASTIC_HRH
+
+/** Elastic enumerate command codes */
+enum TElasticIds
+    {
+    EElasticShock = 1, // start value must not be 0
+    EElasticAbout
+    };
+
+#endif // ELASTIC_HRH
+
+// End of File
